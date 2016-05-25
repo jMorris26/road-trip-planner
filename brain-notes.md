@@ -68,3 +68,21 @@ rv.addEventListener('click', function() {
   car.style.opacity = '0.5';
   truck.style.opacity = '0.5';
 });
+
+
+giant if statement
+if(fillStyle === 0) {
+  newContent.innerHTML = 'You do not have to stop for gas!';
+} else if(fillStyle === 1 && hours === 0) {
+  newContent.innerHTML = 'You will need to stop for gas ' + '<span style =\"font-family:Lobster,cursive\">' + '1' + '</span>' + ' time!';
+  fillUp2.innerHTML = 'This will add approximately ' + '<span style =\"font-family:Lobster,cursive\">' + minutes + '</span>' + ' ' + mword + ' to your trip.';
+  asterisk.innerHTML = '*Assuming you fill up at a quarter tank.';
+} else if(minutes === 0) {
+  newContent.innerHTML = 'You will need to stop for gas ' + '<span style =\"font-family:Lobster,cursive\">' + tryStyle + '</span>' + ' times!*';
+  fillUp2.innerHTML = 'This will add approximately ' + '<span style =\"font-family:Lobster,cursive\">' + hours + '</span>' + ' ' + hword + ' to your trip.';
+  asterisk.innerHTML = '*Assuming you fill up at a quarter tank.';
+} else {
+  newContent.innerHTML = 'You will need to stop for gas ' + '<span style =\"font-family:Lobster,cursive\">' + tryStyle + '</span>' + ' times!*';
+  fillUp2.innerHTML = 'This will add approximately ' + '<span style =\"font-family:Lobster,cursive\">' + hours + '</span>' + ' ' + hword + ' and ' + '<span style =\"font-family:Lobster,cursive\">' + minutes + '</span>' + ' ' + mword + ' to your trip.';
+  asterisk.innerHTML = '*Assuming you fill up at a quarter tank.';
+}

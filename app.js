@@ -119,6 +119,7 @@ button.addEventListener('click', function() {
     var fillStyle = Math.round(fillUp);
     var asterisk = document.getElementById('asterisk');
 
+
     var tryStyle = fillStyle.toString();
     var fillTime = fillStyle * 15;
     console.log('This is how many minutes each fill up will add to your trip: ' + fillTime);
@@ -147,31 +148,24 @@ button.addEventListener('click', function() {
 
     if(fillStyle === 0) {
       newContent.innerHTML = 'You do not have to stop for gas!';
-    } else if(fillStyle > 1 && hours === 0) {
+    } else if(fillStyle === 1) {
       newContent.innerHTML = 'You will need to stop for gas ' + '<span style =\"font-family:Lobster,cursive\">' + '1' + '</span>' + ' time!';
       fillUp2.innerHTML = 'This will add approximately ' + '<span style =\"font-family:Lobster,cursive\">' + minutes + '</span>' + ' ' + mword + ' to your trip.';
       asterisk.innerHTML = '*Assuming you fill up at a quarter tank.';
-    } else if(minutes === 0) {
+    } else if(fillStyle > 1 && hours === 0) {
       newContent.innerHTML = 'You will need to stop for gas ' + '<span style =\"font-family:Lobster,cursive\">' + tryStyle + '</span>' + ' times!*';
-      fillUp2.innerHTML = 'This will add approximately ' + '<span style =\"font-family:Lobster,cursive\">' + hours + '</span>' + ' ' + hword + ' to your trip.';
+      fillUp2.innerHTML = 'This will add approximately ' + '<span style =\"font-family:Lobster,cursive\">' + minutes + '</span>' + ' ' + mword + ' to your trip.';
       asterisk.innerHTML = '*Assuming you fill up at a quarter tank.';
-    } else {
+    } else if(fillStyle > 1 && hours > 0 && minutes > 0) {
       newContent.innerHTML = 'You will need to stop for gas ' + '<span style =\"font-family:Lobster,cursive\">' + tryStyle + '</span>' + ' times!*';
       fillUp2.innerHTML = 'This will add approximately ' + '<span style =\"font-family:Lobster,cursive\">' + hours + '</span>' + ' ' + hword + ' and ' + '<span style =\"font-family:Lobster,cursive\">' + minutes + '</span>' + ' ' + mword + ' to your trip.';
       asterisk.innerHTML = '*Assuming you fill up at a quarter tank.';
+    } else if(fillStyle > 1 && hours > 0 && minutes === 0) {
+      newContent.innerHTML = 'You will need to stop for gas ' + '<span style =\"font-family:Lobster,cursive\">' + tryStyle + '</span>' + ' times!*';
+      fillUp2.innerHTML = 'This will add approximately ' + '<span style =\"font-family:Lobster,cursive\">' + hours + '</span>' + ' ' + hword + ' to your trip.';
+      asterisk.innerHTML = '*Assuming you fill up at a quarter tank.';
     }
 
-
-    // if(hours === 0) {
-    //   fillUp2.innerHTML = 'This will add approximately ' + '<span style =\"font-family:Lobster,cursive\">' + minutes + '</span>' + ' ' + mword + ' to your trip.';
-    // } else if(hours === 0 && minutes === 0) {
-    //   fillUp2.innerHTML = ' ';
-    // } else if(minutes > 0) {
-    //   fillUp2.innerHTML = 'This will add approximately ' + '<span style =\"font-family:Lobster,cursive\">' + hours + '</span>' + ' ' + hword + ' and ' + '<span style =\"font-family:Lobster,cursive\">' + minutes + '</span>' + ' ' + mword + ' to your trip.';
-    // }
-
-    // newContent.innerHTML = 'You will need to stop for gas ' + '<span style =\"font-family:Lobster,cursive\">' + tryStyle + '</span>' + ' times!*<br />' +
-    // 'This will add approximately ' + '<span style =\"font-family:Lobster,cursive\">' + hours + '</span>' + '  ' + hword + '<span style =\"font-family:Lobster,cursive\">' + minutes + '  ' + '</span>' + mword + ' to your trip.';
 
     duration = data.routes[0].legs[0].duration.text;
     console.log(duration);

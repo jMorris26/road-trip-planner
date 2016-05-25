@@ -13,6 +13,7 @@ body {
 
 header {
   color: rgb(255,255,255);
+  text-shadow: 1px 1px 3px black;
   font-size: 5em;
   font-family: 'Lobster', cursive;
   text-align: center;
@@ -21,6 +22,7 @@ header {
 }
 
 input {
+  box-shadow: 1px 1px 3px black;
   border: none;
   float: none;
   border-radius: 1em;
@@ -30,12 +32,14 @@ input {
 
 input[type="text"] {
   color: rgb(27, 75, 26);
-  font-size: 1.5em;
+  font-size: 1em;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
+
 }
 
 .start {
+  text-shadow: 1px 1px 3px black;
   text-align: center;
   color: rgb(221, 224, 226);
   font-size: 1.25em;
@@ -44,13 +48,13 @@ input[type="text"] {
 }
 
 #car {
-  margin-top:3.7em;
+  margin-top:4em;
   /*border: 2px solid white;*/
   vertical-align: bottom;
 }
 
 #truck {
-  margin-top:2.2em;
+  margin-top:2em;
   /*border: 2px solid white;*/
   vertical-align: bottom;
 }
@@ -73,6 +77,7 @@ img:hover {
 
 button {
   /*margin-top: 2em;*/
+  box-shadow: 1px 1px 3px black;
   transition: all .2s ease-in-out;
   border-radius: 1em;
   background-color: rgb(255,255,255);
