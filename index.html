@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Travel Plan</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Quicksand|EB Garamond|Lobster|Arimo|JosefinSans-Light|Amatic SC">
+
+  </head>
+  <body class="container-fluid">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <header class="col-md-4">Road Trip Planner</header>
+    </div>
+
+    <div class="wrapper">
+      <div class="row">
+        <label class="start">Where are you beginning your journey?</label>
+        <div class="col-md-4"></div>
+        <input class="col-md-4" type="text" name="first" id="begin">
+      </div>
+
+      <div class="row">
+        <label class="start">Where will you arrive?</label>
+        <div class="col-md-4"></div>
+        <input class="col-md-4" type="text" name="second" id="end">
+        <div class="col-md-4"></div>
+      </div>
+
+      <div class="row">
+        <label class="start">What is your vehicle's average MPG?</label>
+        <div class="col-md-5"></div>
+        <input class="col-md-2" id="mpg" type="text">
+      </div>
+
+      <div class="row" id="icons">
+        <label class="start">What are you driving?</label>
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <div class="col-md-3">
+            <img src="images/car-nobg.png" id="car">
+          </div>
+          <div class="col-md-4">
+            <img src="images/truck-nobg.png" id="truck">
+          </div>
+          <div class="col-md-5">
+            <img src="images/rv-nobg.png" id="rv">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <label class="start">Size of your gas tank:</label>
+        <div class="col-md-5"></div>
+        <input class="col-md-2" type="text" id="tanksize">
+      </div>
+
+      <div class="row">
+        <div class="col-md-4"></div>
+        <button class="col-md-4 grow">How many times will you stop for gas?</button>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3"></div>
+          <div class="col-md-6" id="fillUp"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6" id="fillUp2"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4" id="asterisk"></div>
+      </div>
+
+
+      <!-- <footer>© Jessica Morris 2016</footer> -->
+    </div>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>

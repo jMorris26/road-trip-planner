@@ -1,0 +1,117 @@
+body {
+  background-image: url('images/california-210913_1920.jpg');
+  background-color: rgb(52, 56, 59);
+  background-blend-mode: overlay;
+  background-size: cover;
+
+}
+
+.wrapper {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+header {
+  color: rgb(255,255,255);
+  font-size: 5em;
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+
+input {
+  border: none;
+  float: none;
+  border-radius: 1em;
+  margin-bottom: 2em;
+  outline:none;
+}
+
+input[type="text"] {
+  color: rgb(27, 75, 26);
+  font-size: 1.5em;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+
+.start {
+  text-align: center;
+  color: rgb(221, 224, 226);
+  font-size: 1.25em;
+  font-family: 'Quicksand', sans-serif;
+  display: block;
+}
+
+#car {
+  margin-top:3.7em;
+  /*border: 2px solid white;*/
+  vertical-align: bottom;
+}
+
+#truck {
+  margin-top:2.2em;
+  /*border: 2px solid white;*/
+  vertical-align: bottom;
+}
+
+#rv {
+  /*border: 2px solid white;*/
+  vertical-align: bottom;
+}
+
+
+img {
+  opacity: .5;
+  margin-bottom: 1.5em;
+  width:100%;
+}
+
+img:hover {
+  opacity: 1;
+}
+
+button {
+  /*margin-top: 2em;*/
+  transition: all .2s ease-in-out;
+  border-radius: 1em;
+  background-color: rgb(255,255,255);
+  border: 1px solid rgb(19, 219, 23);
+  text-align: center;
+  font-family: 'Lobster', sans-serif;
+  font-size: 2em;
+  color: rgb(0, 113, 2);
+  outline: none;
+}
+
+.grow:hover {
+  transform: scale(1.1);
+}
+
+#fillUp {
+  margin-top: 2em;
+  color: rgb(255,255,255);
+  font-size: 2em;
+  text-align: center;
+}
+
+#fillUp2 {
+  color: rgb(255,255,255);
+  font-size: 2em;
+  text-align: center;
+}
+
+#asterisk {
+  color: rgb(184, 180, 183);
+  font-size: 1em;
+  text-align:center;
+  font-family: 'Quicksand', sans-serif;
+  margin-top: 1em;
+}
+
+footer {
+  color: rgb(221, 224, 226);
+  font-family: 'Quicksand', sans-serif;
+  position: absolute;
+  bottom:0;
+}
