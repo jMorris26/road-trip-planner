@@ -119,14 +119,15 @@ button.addEventListener('click', function() {      //an event listener is added 
       noMilesInteger = distance;
 
     } else if(data) {
-
       distance = data.routes[0].legs[0].distance.text;
       var distanceStr = distance;
       //console.log('Distance equal to a new variable: ' + distanceStr);
       var noMiles = distanceStr.substring(0, distanceStr.length - 3);
       noMilesInteger = parseInt(noMiles.replace(/,/,''));
       //console.log('Should return distance without mi: ' + noMilesInteger);
+
     }
+
     console.log(distance);
     console.log('Distance: ' + distance);
 
@@ -179,6 +180,8 @@ button.addEventListener('click', function() {      //an event listener is added 
 
     if(tryStyle === '0') {
       newContent.innerHTML = 'You do not have to stop for gas!';
+    } else if(tryStyle === 'NaN' || hours === 'NaN' || minutes === 'NaN' && !distance) {
+      window.alert("I'm sorry, Dave. I'm afraid I can't do that.");
     } else if(tryStyle === '1') {
       newContent.innerHTML = 'You will need to stop for gas ' + '<span style =\"font-family:Lobster,cursive\">' + '1' + '</span>' + ' time!';
       fillUp2.innerHTML = 'This will add approximately ' + '<span style =\"font-family:Lobster,cursive\">' + minutes + '</span>' + ' ' + mword + ' to your trip.';
