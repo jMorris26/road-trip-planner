@@ -114,6 +114,13 @@ button {
   margin-top: 1em;
 }
 
+p {
+  color: rgb(255,255,255);
+  font-size: 2em;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
 footer {
   color: rgb(221, 224, 226);
   font-family: 'Quicksand', sans-serif;

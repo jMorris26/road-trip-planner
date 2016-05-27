@@ -97,6 +97,7 @@ button.addEventListener('click', function() {      //an event listener is added 
       'mercury' : 0.39,
       'venus' : 0.72,
       'earth' : 1,
+      'moon' : 0.00257,
       'mars' : 1.52,
       'jupiter' : 5.2,
       'saturn' : 9.58,
@@ -104,18 +105,21 @@ button.addEventListener('click', function() {      //an event listener is added 
       'neptune' : 30.05,
       'pluto' : 39.48
     };
+
+
     //console.log('Planet start value: ' + start.value.toLowerCase());
-    if(planets[start.value.toLowerCase()] && planets[destination.value.toLowerCase()]) {
+
+    if (planets[start.value.toLowerCase()] && planets[destination.value.toLowerCase()]) {
       console.log('Planet start value: ' + planets[start.value.toLowerCase()]);
       var toMilesStart = planets[start.value.toLowerCase()] * 93000000;
         console.log('Miles from sun starting value: ' + toMilesStart);
       var toMilesEnd = planets[destination.value.toLowerCase()] * 93000000;
         console.log('Miles from sun ending value: ' + toMilesEnd);
-      if(toMilesStart > toMilesEnd) {
-        distance = toMilesStart - toMilesEnd;
-      } else if(toMilesStart < toMilesEnd) {
-        distance = toMilesEnd - toMilesStart;
-      }
+        if(toMilesStart > toMilesEnd) {
+          distance = toMilesStart - toMilesEnd;
+        } else if(toMilesStart < toMilesEnd) {
+          distance = toMilesEnd - toMilesStart;
+        }
       noMilesInteger = distance;
 
     } else if(data) {
@@ -125,9 +129,9 @@ button.addEventListener('click', function() {      //an event listener is added 
       var noMiles = distanceStr.substring(0, distanceStr.length - 3);
       noMilesInteger = parseInt(noMiles.replace(/,/,''));
       //console.log('Should return distance without mi: ' + noMilesInteger);
-
     }
 
+    console.log(data.routes[0].legs[0].start_address + data.routes[0].legs[0].end_address);
     console.log(distance);
     console.log('Distance: ' + distance);
 

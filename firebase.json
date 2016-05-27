@@ -1,0 +1,9 @@
+{
+  "firebase": "road-trip-gasoline",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
