@@ -184,6 +184,8 @@ button.addEventListener('click', function() {      //an event listener is added 
 
       if(tryStyle === '0') {
         newContent.innerHTML = 'You do not have to stop for gas!';
+        fillUp2.innerHTML = '';
+        asterisk.innerHTML = '';
       } else if(tryStyle === 'NaN' || hours === 'NaN' || minutes === 'NaN' && !distance) {
         window.alert("I'm sorry, Dave. I'm afraid I can't do that.");
       } else if(tryStyle === '1') {
