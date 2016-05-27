@@ -186,8 +186,6 @@ button.addEventListener('click', function() {      //an event listener is added 
         newContent.innerHTML = 'You do not have to stop for gas!';
         fillUp2.innerHTML = '';
         asterisk.innerHTML = '';
-      } else if(tryStyle === 'NaN' || hours === 'NaN' || minutes === 'NaN' && !distance) {
-        window.alert("I'm sorry, Dave. I'm afraid I can't do that.");
       } else if(tryStyle === '1') {
         newContent.innerHTML = 'You will need to stop for gas ' + '<span style =\"font-family:Lobster,cursive\">' + '1' + '</span>' + ' time!';
         fillUp2.innerHTML = 'This will add approximately ' + '<span style =\"font-family:Lobster,cursive\">' + minutes + '</span>' + ' ' + mword + ' to your trip.';
@@ -207,7 +205,7 @@ button.addEventListener('click', function() {      //an event listener is added 
       }
 
     } else {
-      window.alert("You can't drive across the ocean, stupid.");
+      window.alert("You can't DRIVE there, stupid.");
     }
 
     //console.log('Planet start value: ' + start.value.toLowerCase());
